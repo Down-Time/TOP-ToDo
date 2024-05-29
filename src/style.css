@@ -1,0 +1,206 @@
+
+
+body{
+    margin: 0;
+    font-family: 'arial', sans-serif;
+}
+/* html, body,#content{
+    height: 100%;
+} */
+
+#content{
+    color: black; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 1.5 em;
+    height: 1.5 em;
+    float: left;
+    /*margin-right: 1rem;*/
+    fill: #999;
+    pointer-events: none;
+  }
+  #iconRemove, #iconEdit{
+    width: 1.5em;
+  }
+
+  #titleInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+  #headInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  #list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  .listItem{
+    border: 1px #555 solid;
+    width: 150px;
+    padding: 5px;
+    border-radius: .5em;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+
+nav, a{
+    background: black;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'arial', sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+    color: white;
+    
+}
+
+
+@keyframes add-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;	
+	}
+}
+/* animate new box */
+.new-box {
+	animation: add-animate .3s linear;
+}
+
+
+.listItem h4, p, label, input{
+  margin: 0.2em;
+}
+/* .listItem h4{
+  text-align: center;
+} */
+/* .listItem p, label{
+  color: #555;
+} */
+
+.listItem input[type=button]{
+  display: block;
+  align-content: center;
+}
+.listItem img{
+  width: 2em;
+  align-self: flex-end;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 20px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin: auto;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text]{
+    width: 100%;
+    /* me */
+    box-sizing: border-box;
+  
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+    /* Full-width input fields */
+    .form-container textarea{
+      width: 100%;
+      /* me */
+      box-sizing: border-box;
+      resize: none;
+    
+      padding: 15px;
+      margin: 5px 0 5px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+  
+  .ckb{
+    width: 100%;
+    /* me */
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 5px 0 10px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .ckb label{
+    font-size: 13.33px;
+    opacity: .75;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  .form-container ul{
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: #555;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+  
